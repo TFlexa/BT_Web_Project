@@ -1,34 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Carousel } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const Nav = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  li {
-    margin-right: 1rem;
-  }
-  a {
-    text-decoration: none;
-    color: blue;
-  }
+const StyledImage = styled.img`
+  height: 800px;
+  width: 100%; 
+  object-fit: cover; 
 `;
 
 const Header = () => {
   return (
     <header>
-      <Nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/championships">Campeonatos</Link>
-          </li>
-        </ul>
-      </Nav>
+      <Carousel>
+        <Carousel.Item>
+          <StyledImage
+            src={require('../Images/Imagem_Principal.png')}
+            alt="Primeira imagem"
+          />
+          <Carousel.Caption>
+            <h3>Imagem 1</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <StyledImage
+            src={require('../Images/beach-tennis.jpeg')}
+            alt="Segunda imagem"
+          />
+          <Carousel.Caption>
+            <h3>Imagem 2</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+      <div className="text-center">
+        <h1>Bem-vindo ao Campeonato de Beach Tennis</h1>
+        <p>Acompanhe o ranking e as estatísticas dos jogadores!</p>
+      </div>
     </header>
   );
 };

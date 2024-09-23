@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PlayerTable from '../components/PlayerTable';
 import AddPlayerForm from '../components/AddPlayerForm';
+import Header from '../components/Header'; // Importe o novo componente
 
 const Home = ({ players, setPlayers }) => {
   const [editingPlayer, setEditingPlayer] = useState(null);
@@ -22,8 +23,7 @@ const Home = ({ players, setPlayers }) => {
 
   return (
     <div>
-      <h1>Bem-vindo ao Campeonato de Beach Tennis</h1>
-      <p>Acompanhe o ranking e as estatísticas dos jogadores!</p>
+      <Header /> {/* Adicione o componente Header aqui */}
 
       <AddPlayerForm 
         onAddPlayer={editingPlayer ? updatePlayer : addPlayer} 

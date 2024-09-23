@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Championships from './Pages/Championship';
-import Header from './components/Header';
+import Header from './components/Cabecalho';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   const [players, setPlayers] = useState([
