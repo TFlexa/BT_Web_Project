@@ -32,7 +32,7 @@ const Header = () => {
         </Carousel.Item>
       </Carousel>
       <div className="text-center">
-        <h1>Bem-vindo ao Campeonato de Beach Tennis</h1>
+        <h1>Campeonato de Beach Tennis Smash Brothers</h1>
         <p>Acompanhe o ranking e as estatísticas dos jogadores!</p>
       </div>
     </header>
